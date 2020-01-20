@@ -13,7 +13,7 @@
         padding: 3rem 0;
 
         @media only screen and (max-width: $breakpoint-md) {
-            padding: 1rem 0;       
+            padding: 1rem;       
         }
     }
 }
@@ -47,9 +47,14 @@
 }
 
 .mobile-nav {
+    display: none;
     border: none;
     background-color: transparent;
     padding: 1rem;
+
+    @media only screen and (max-width: $breakpoint-md) {
+        display: block;    
+    }
 }
 
   

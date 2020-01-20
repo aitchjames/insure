@@ -79,6 +79,143 @@ body {
     color: var(--color-primary);
     background-color: var(--color-light); }
 
+.call-to-action {
+  background-color: var(--color-primary);
+  color: var(--color-gray-light);
+  padding: 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("../images/bg-pattern-how-we-work-desktop.svg");
+  background-position: right top;
+  background-repeat: no-repeat; }
+  @media only screen and (max-width: 768px) {
+    .call-to-action {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      background-image: url("../images/bg-pattern-how-we-work-mobile.svg"); } }
+  .call-to-action h2 {
+    font-size: 4.5rem;
+    font-family: var(--font-heading);
+    font-weight: 400;
+    line-height: 1.1; }
+    @media only screen and (max-width: 768px) {
+      .call-to-action h2 {
+        margin-bottom: 4rem; } }
+    .call-to-action h2 span {
+      display: block; }
+  .call-to-action a {
+    text-transform: uppercase; }
+
+.features .container {
+  padding: 3rem 0;
+  margin-bottom: 15rem; }
+  @media only screen and (max-width: 768px) {
+    .features .container {
+      margin-bottom: 5rem; } }
+  .features .container h1 {
+    font-size: 6.5rem;
+    font-family: var(--font-heading);
+    font-weight: 400;
+    margin-bottom: 6rem;
+    position: relative; }
+    @media only screen and (max-width: 768px) {
+      .features .container h1 {
+        font-size: 5.5rem;
+        text-align: center; } }
+    .features .container h1:before {
+      content: "";
+      position: absolute;
+      height: 15px;
+      border-top: 1px solid var(--color-primary-dark);
+      top: 0;
+      width: 15rem;
+      margin-top: -3rem; }
+      @media only screen and (max-width: 768px) {
+        .features .container h1:before {
+          transform: translateX(60%); } }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-gap: 5rem; }
+  @media only screen and (max-width: 768px) {
+    .cards {
+      text-align: center;
+      padding: 2rem; } }
+
+.card svg {
+  margin-bottom: 2rem; }
+
+.card h3 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem; }
+
+.card p {
+  color: var(--color-secondary-dark); }
+
+.footer {
+  background-color: var(--color-gray-light);
+  margin-top: 15rem;
+  padding: 2rem 0;
+  background-image: url("../images/bg-pattern-footer-desktop.svg");
+  background-position: left top;
+  background-repeat: no-repeat; }
+  .footer-logo {
+    width: auto;
+    max-height: 3rem; }
+    @media only screen and (max-width: 768px) {
+      .footer-logo {
+        margin-bottom: 4rem; } }
+  .footer-top {
+    padding: 3rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--color-secondary); }
+    @media only screen and (max-width: 768px) {
+      .footer-top {
+        padding: 3rem;
+        flex-direction: column; } }
+    .footer-top-icons {
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      grid-column-gap: 2rem;
+      list-style: none; }
+  .footer-bottom {
+    padding: 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 5rem; }
+    @media only screen and (max-width: 768px) {
+      .footer-bottom {
+        text-align: center; } }
+    .footer-bottom__col {
+      font-size: 1.4rem; }
+      @media only screen and (max-width: 768px) {
+        .footer-bottom__col {
+          font-size: 1.6rem; } }
+      .footer-bottom__col h4 {
+        color: var(--color-secondary);
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        font-weight: 700; }
+      .footer-bottom__col ul {
+        list-style: none; }
+        .footer-bottom__col ul li {
+          margin-bottom: 0.8rem; }
+          @media only screen and (max-width: 768px) {
+            .footer-bottom__col ul li {
+              margin-bottom: 1.2rem; } }
+          .footer-bottom__col ul li a {
+            color: var(--color-primary-dark);
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: 700; }
+
 .hero {
   background-color: var(--color-primary);
   height: 60rem;
@@ -86,7 +223,8 @@ body {
   @media only screen and (max-width: 768px) {
     .hero {
       height: auto;
-      padding-bottom: 8rem; } }
+      padding-bottom: 8rem;
+      margin-bottom: 10rem; } }
   .hero .container {
     color: var(--color-gray-light);
     padding: 15rem 0 10rem 0;
@@ -104,7 +242,7 @@ body {
     @media only screen and (max-width: 768px) {
       .hero-information {
         text-align: center;
-        padding-top: 3rem;
+        padding: 6rem 1rem;
         max-width: 95%;
         margin: 0 auto; } }
     .hero-information h1 {
@@ -134,6 +272,7 @@ body {
       margin-bottom: 3.5rem; }
       @media only screen and (max-width: 768px) {
         .hero-information p {
+          font-size: 2rem;
           margin-bottom: 5rem; } }
   @media only screen and (max-width: 768px) {
     .hero-image {
@@ -155,9 +294,9 @@ body {
     z-index: 5; }
     @media only screen and (max-width: 768px) {
       .hero-wrapper {
-        margin-top: 45rem;
+        margin-top: 50rem;
         background-image: url("../images/bg-pattern-intro-left-mobile.svg"), url("../images/bg-pattern-intro-right-mobile.svg");
-        background-position: left top, right bottom; } }
+        background-position: left top 50px, right bottom; } }
 
 .navbar {
   background-color: var(--color-gray-light); }
@@ -171,7 +310,7 @@ body {
     padding: 3rem 0; }
     @media only screen and (max-width: 768px) {
       .navbar .container {
-        padding: 1rem 0; } }
+        padding: 1rem; } }
 
 @media only screen and (max-width: 768px) {
   .nav {
@@ -195,6 +334,10 @@ body {
       color: var(--color-light); }
 
 .mobile-nav {
+  display: none;
   border: none;
   background-color: transparent;
   padding: 1rem; }
+  @media only screen and (max-width: 768px) {
+    .mobile-nav {
+      display: block; } }

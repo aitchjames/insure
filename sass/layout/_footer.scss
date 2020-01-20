@@ -1,0 +1,83 @@
+.footer {
+    background-color: var(--color-gray-light);
+    margin-top: 15rem;
+    padding: 2rem 0;
+
+    background-image: url("../images/bg-pattern-footer-desktop.svg");
+    background-position: left top;
+    background-repeat: no-repeat;
+
+    &-logo {
+        width: auto;
+        max-height: 3rem;
+
+        @media only screen and (max-width: $breakpoint-md) {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &-top {
+        padding: 3rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid var(--color-secondary);
+
+        @media only screen and (max-width: $breakpoint-md) {
+            padding: 3rem;
+            flex-direction: column;
+        }
+
+        &-icons {
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            grid-column-gap: 2rem;
+            list-style: none; 
+        }        
+    }
+
+    &-bottom {
+        padding: 3rem 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        grid-gap: 5rem;
+
+        @media only screen and (max-width: $breakpoint-md) {
+            text-align: center;
+        }
+
+        &__col {
+            font-size: 1.4rem;
+
+            @media only screen and (max-width: $breakpoint-md) {
+                font-size: 1.6rem;
+            }
+
+            & h4 {
+                color: var(--color-secondary);
+                text-transform: uppercase;                
+                margin-bottom: 2rem;
+                font-weight: 700;
+            }
+
+            & ul {
+                list-style: none;
+
+                & li {
+                    margin-bottom: 0.8rem;
+
+                    @media only screen and (max-width: $breakpoint-md) {
+                        margin-bottom: 1.2rem;
+                    }
+
+                    a {
+                        color: var(--color-primary-dark);                        
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}

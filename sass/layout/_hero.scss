@@ -6,6 +6,7 @@
     @media only screen and (max-width: $breakpoint-md) {
         height: auto;
         padding-bottom: 8rem;
+        margin-bottom: 10rem;  
     }
 
     & .container {
@@ -24,12 +25,11 @@
     }
 
     &-information {
-        z-index: 10;
-        
+        z-index: 10;     
 
         @media only screen and (max-width: $breakpoint-md) {
             text-align: center;
-            padding-top: 3rem;
+            padding: 6rem 1rem;
             max-width: 95%;
             margin: 0 auto;
         }
@@ -69,6 +69,7 @@
             margin-bottom: 3.5rem;
 
             @media only screen and (max-width: $breakpoint-md) {
+                font-size: 2rem;
                 margin-bottom: 5rem;
             }
         }
@@ -100,9 +101,9 @@
         z-index: 5;
 
         @media only screen and (max-width: $breakpoint-md) {
-            margin-top: 45rem;
+            margin-top: 50rem;
             background-image: url("../images/bg-pattern-intro-left-mobile.svg"), url("../images/bg-pattern-intro-right-mobile.svg");
-            background-position: left top, right bottom;               
+            background-position: left top 50px, right bottom;               
         }
     }
 }
