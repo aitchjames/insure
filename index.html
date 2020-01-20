@@ -23,6 +23,10 @@
                     <li><a href="" class="button">View plans</a></li>
                 </ul>
             </div>
+            <button class="mobile-nav">
+                <span class="open"><img src="images/icon-hamburger.svg" alt=""></span>
+                <span class="close"><img src="images/icon-close.svg" alt=""></span>
+            </button>
         </div>
     </header>
     <div class="hero-wrapper"></div>
@@ -36,7 +40,10 @@
                 <a href="" class="button button--light">View plans</a>  
             </div>
             <div class="hero-image">
-                <img src="images/image-intro-desktop.jpg" alt="">
+                <picture>
+                    <source media="(min-width: 576px)" srcset="images/image-intro-desktop.jpg">
+                    <img src="images/image-intro-mobile.jpg" alt="Insure Hero Image">
+                </picture>
             </div>
         </div>      
     </section>    
@@ -101,5 +108,16 @@
             </div>
         </div>
     </footer>
+    <script>
+        const navButton = document.querySelector('button[aria-expanded]');
+    
+        function toggleNav({ target }) {
+          const expanded = target.getAttribute('aria-expanded') === 'true' || false;
+          navButton.setAttribute('aria-expanded', !expanded);
+        }
+    
+        navButton.addEventListener('click', toggleNav);
+    
+      </script>
 </body>
 </html>
