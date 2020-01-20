@@ -1,0 +1,24 @@
+:root {
+    // Breakpoints
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    // Font
+    --font-heading: 'DM Serif Display', serif;
+    --font-body: 'Karla', sans-serif;
+    // Colours
+    --color-primary: hsl(256, 26%, 20%);
+    --color-primary-dark: hsl(270, 9%, 17%);
+    --color-secondary: hsl(216, 30%, 68%);
+    --color-secondary-dark:hsl(273, 4%, 51%) ;
+    --color-gray-light: hsl(0, 0%, 98%);
+    --color-light:#f8f9fa;
+    --color-dark:#212529;
+    
+}
+
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;

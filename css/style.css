@@ -1,0 +1,74 @@
+:root {
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-heading: 'DM Serif Display', serif;
+  --font-body: 'Karla', sans-serif;
+  --color-primary: hsl(256, 26%, 20%);
+  --color-primary-dark: hsl(270, 9%, 17%);
+  --color-secondary: hsl(216, 30%, 68%);
+  --color-secondary-dark:hsl(273, 4%, 51%) ;
+  --color-gray-light: hsl(0, 0%, 98%);
+  --color-light:#f8f9fa;
+  --color-dark:#212529; }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 992px) {
+    html {
+      font-size: 50%; } }
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-dark);
+  font-weight: 300;
+  line-height: 1.6;
+  font-size: 1.6rem;
+  min-width: 320px;
+  overflow-x: hidden;
+  scroll-behavior: smooth; }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+  @media only screen and (max-width: 992px) {
+    .grid-container {
+      grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end]; } }
+
+.page-container {
+  display: grid;
+  grid-template-rows: 90vh min-content;
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+  @media only screen and (max-width: 992px) {
+    .page-container {
+      grid-template-rows: 90vh min-content;
+      grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end]; } }
+
+.content-grid {
+  display: grid;
+  grid-template-columns: [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end]; }
+  @media only screen and (max-width: 992px) {
+    .content-grid {
+      grid-template-columns: [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end]; } }
+
+.button {
+  border: none;
+  color: var(--color-light);
+  background-color: var(--color-primary);
+  font-weight: 500;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background-color 0.3s ease; }
+  .button:hover {
+    background-color: #99e3e2; }
