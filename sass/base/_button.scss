@@ -1,7 +1,7 @@
 .button {
-    border: none;
+    border: 1px var(--color-light) solid;
     color: var(--color-light);
-    background-color: var(--color-primary);
+    background-color: transparent;
     font-weight: 500;
     padding: 1rem 3rem;
     cursor: pointer;
@@ -10,6 +10,7 @@
     transition: background-color 0.3s ease;
 
     &:hover {
-        background-color: #99e3e2;
+        color: var(--color-primary);
+        background-color: var(--color-light);
     }
 }

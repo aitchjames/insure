@@ -60,10 +60,15 @@ body {
     .content-grid {
       grid-template-columns: [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end]; } }
 
+.container {
+  margin: 0px auto;
+  max-width: 95%;
+  width: 120rem; }
+
 .button {
-  border: none;
+  border: 1px var(--color-light) solid;
   color: var(--color-light);
-  background-color: var(--color-primary);
+  background-color: transparent;
   font-weight: 500;
   padding: 1rem 3rem;
   cursor: pointer;
@@ -71,4 +76,76 @@ body {
   text-decoration: none;
   transition: background-color 0.3s ease; }
   .button:hover {
-    background-color: #99e3e2; }
+    color: var(--color-primary);
+    background-color: var(--color-light); }
+
+.hero {
+  background-color: var(--color-primary);
+  height: 60rem;
+  margin-bottom: 30rem; }
+  .hero .container {
+    color: var(--color-gray-light);
+    padding: 15rem 0 10rem 0;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-column-gap: 10rem; }
+  .hero-information {
+    z-index: 10; }
+    .hero-information h1 {
+      font-size: 6.5rem;
+      font-family: var(--font-heading);
+      font-weight: 400;
+      position: relative;
+      max-width: 500px;
+      line-height: 1.1;
+      margin-bottom: 2rem; }
+      .hero-information h1 span {
+        display: block; }
+      .hero-information h1:before {
+        content: "";
+        position: absolute;
+        height: 15px;
+        border-top: 1px solid white;
+        top: 0;
+        width: 15rem;
+        margin-top: -3rem; }
+    .hero-information p {
+      margin-bottom: 3.5rem; }
+  .hero-image img {
+    margin-top: -3rem; }
+  .hero-wrapper {
+    background-image: url("../images/bg-pattern-intro-left-desktop.svg"), url("../images/bg-pattern-intro-right-desktop.svg");
+    background-position: left bottom, right top;
+    background-repeat: no-repeat;
+    height: 800px;
+    width: 100%;
+    position: absolute;
+    z-index: 5; }
+
+.navbar {
+  background-color: var(--color-gray-light); }
+  .navbar-logo {
+    width: auto;
+    max-height: 3rem; }
+  .navbar .container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 3rem 0; }
+
+.nav ul {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-column-gap: 3rem;
+  list-style: none; }
+  .nav ul li a {
+    text-decoration: none;
+    color: var(--color-secondary);
+    text-transform: uppercase; }
+    .nav ul li a.button {
+      border: 1px var(--color-primary-dark) solid;
+      color: var(--color-primary-dark); }
+      .nav ul li a.button:hover {
+        background-color: var(--color-primary-dark);
+        color: var(--color-light); }

@@ -1,0 +1,38 @@
+.navbar {
+    background-color: var(--color-gray-light);
+
+    &-logo {
+        width: auto;
+        max-height: 3rem;
+    }
+
+    & .container {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        padding: 3rem 0;
+    }
+}
+
+.nav ul {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-column-gap: 3rem;
+    list-style: none;
+
+    & li a {
+        text-decoration: none;
+        color: var(--color-secondary);
+        text-transform: uppercase;
+
+        &.button {
+            border: 1px var(--color-primary-dark) solid;
+            color: var(--color-primary-dark);
+
+            &:hover {
+                background-color: var(--color-primary-dark);
+                color: var(--color-light);
+            }
+        }
+    }
+}
