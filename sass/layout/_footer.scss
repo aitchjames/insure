@@ -16,6 +16,15 @@
         }
     }
 
+    &-icon:hover {
+        transition: all .2s;
+
+        & svg path {
+            transition: fill .4s ease;
+            fill: var(--color-primary-dark);
+        }
+    }
+
     &-top {
         padding: 3rem 0;
         display: flex;
@@ -31,8 +40,9 @@
         &-icons {
             display: grid;
             grid-template-columns: repeat(4, auto);
+            align-items: center;
             grid-column-gap: 2rem;
-            list-style: none; 
+            list-style: none;           
         }        
     }
 
@@ -81,3 +91,4 @@
         }
     }
 }
+
